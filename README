@@ -1,0 +1,102 @@
+MANUAL QA TESTING PORTFOLIO
+Author: Mohammad Taha
+Role: Aspiring Manual QA Engineer
+
+------------------------------------------------------------
+
+ABOUT THIS REPOSITORY
+
+This repository contains my hands-on practice work in Manual Software Testing. 
+It includes structured test cases created using MS Excel for different application modules 
+by applying standard QA methodologies and test case design techniques.
+
+The objective of this repository is to demonstrate:
+
+- Understanding of SDLC and STLC
+- Practical implementation of test case design techniques
+- Ability to structure and document test scenarios
+- Knowledge of validation and negative testing
+- Organized QA documentation skills
+
+------------------------------------------------------------
+
+MODULES COVERED
+
+1) Authentication Module (Login and Password Validation)
+
+Scope:
+- Login functionality testing
+- Password validation rules testing
+- Input field validation
+- Negative testing scenarios
+
+Techniques Used:
+- Boundary Value Analysis (BVA)
+- Equivalence Partitioning (EP)
+- Positive Testing
+- Negative Testing
+
+Validations Covered:
+- Uppercase character requirement
+- Lowercase character requirement
+- Numeric character requirement
+- Minimum and maximum length validation
+- Invalid input handling
+
+------------------------------------------------------------
+
+2) Form Validation Testing
+
+Scope:
+- Mandatory field validation
+- Invalid input handling
+- Edge case testing
+- Field-level validation testing
+
+Activities Performed:
+- Designed structured test scenarios
+- Assigned appropriate priority levels
+- Prepared execution-ready test sheets
+- Maintained Pass/Fail/Not Executed status tracking
+
+------------------------------------------------------------
+
+REPOSITORY CONTENTS
+
+This repository includes:
+
+- Manual test case Excel files
+- Structured Test Case IDs
+- Preconditions and Test Steps
+- Test Data and Expected Results
+- Execution status tracking
+- Priority classification
+
+------------------------------------------------------------
+
+TOOLS USED
+
+- MS Excel (Test Case Documentation)
+- GitHub (Version Control and Portfolio Hosting)
+
+------------------------------------------------------------
+
+TESTING APPROACH FOLLOWED
+
+1. Requirement understanding
+2. Test scenario identification
+3. Test case design
+4. Application of BVA and EP techniques
+5. Organizing structured test documentation
+6. Preparing execution-ready test sheets
+
+------------------------------------------------------------
+
+OBJECTIVE
+
+This repository reflects my continuous learning journey toward becoming a professional QA Engineer. 
+I am actively improving my skills in manual testing and expanding toward automation testing in upcoming phases.
+
+------------------------------------------------------------
+
+CONTACT
