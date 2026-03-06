@@ -1,0 +1,166 @@
+# Manual Testing Project – Letter Drafting Web Application
+
+## Project Overview
+
+This project contains **manual testing documentation** for the Letter Drafting Web Application.
+
+The objective of this project was to perform **functional testing, UI testing, and navigation validation** on the web application and document the results using structured **test scenarios and test cases**.
+
+Application Under Test (AUT):
+https://letter-drafting.vercel.app
+
+---
+
+## Testing Scope
+
+The following modules were tested:
+
+• Landing Page
+• Navigation Buttons
+• Login Page
+• Registration Page
+• Payment Upload (QR Based Payment)
+• URL Routing & Anchor Navigation
+• UI Behavior and Validation Messages
+
+---
+
+## Testing Approach
+
+The application was tested using **manual testing techniques**.
+Test scenarios and test cases were written in **Excel format** with the following structure:
+
+Test Case Fields:
+
+• Test Case ID
+• Scenario ID
+• Module
+• Title
+• Preconditions
+• Steps
+• Test Data
+• Expected Result
+• Actual Result
+• Status (Pass / Fail)
+• Severity
+• Priority
+• Comments
+
+---
+
+## Key Test Areas Covered
+
+### 1. Landing Page Testing
+
+Verified that the landing page loads successfully with all primary UI elements.
+
+Tested components:
+
+* Logo visibility
+* Login button
+* Sign Up button
+* Feature section
+* Language tabs
+* Embedded video
+
+---
+
+### 2. Navigation & Routing Testing
+
+Validated the behavior of navigation buttons and URL routing.
+
+Examples:
+
+* Sign Up button redirect behavior
+* Login button redirect behavior
+* Feature button scroll behavior
+* Browser back button navigation
+
+Issues discovered:
+
+* Hash based routing (`/#login`, `/#features`) not working correctly
+* Direct routes (`/login`, `/features`) work but hash routes do not
+* Feature button only changes URL but does not scroll or navigate
+
+---
+
+### 3. Registration Page Testing
+
+Tested user registration workflow including mandatory payment proof upload.
+
+Test scenarios included:
+
+* Sign Up page loading
+* Payment receipt image upload
+* Form submission validation
+
+Issues discovered:
+
+* Payment receipt is mandatory but **no validation message appears**
+* "Create Account" button remains clickable even when receipt is not uploaded
+* No user guidance that payment is required before signup
+
+---
+
+### 4. UI and Usability Testing
+
+Several usability issues were observed during testing.
+
+Examples:
+
+* "Start Drafting Free" button displayed even though the application is not free
+* QR payment image too small and **not expandable**
+* No user feedback when clicking QR image
+* Broken navigation behavior for feature links
+
+---
+
+## Example Defects Identified
+
+| Issue                                               | Type           | Severity | Priority |
+| --------------------------------------------------- | -------------- | -------- | -------- |
+| Feature button does not scroll to section           | Functional/UI  | Medium   | Medium   |
+| Hash route `/ #login` not working                   | Functional     | High     | High     |
+| Payment receipt mandatory but no validation message | Functional     | High     | High     |
+| QR payment image not expandable                     | UI / Usability | Medium   | Medium   |
+| Misleading "Start Drafting Free" button             | UI / UX        | Medium   | Medium   |
+
+---
+
+## Tools Used
+
+Browser: Google Chrome
+Version Tested: 145.0.7632.117
+
+Other Tools:
+
+* Chrome Developer Tools (Console & Network Tab)
+* Microsoft Excel (Test Case Documentation)
+
+---
+
+## Test Case Repository
+
+All test scenarios and test cases are documented in the Excel file:
+
+https://1drv.ms/x/c/e92e0103ee923c1a/IQAhQVsnJuhSTqVxWd3_45KxAaQHl8FdsXqS_7AjcZTBGwo?e=tmgoc9
+
+---
+
+## Learning Outcome
+
+Through this project I practiced:
+
+* Writing structured test scenarios
+* Writing detailed test cases
+* Performing manual functional testing
+* Identifying UI and usability defects
+* Assigning severity and priority
+* Analyzing browser console and network logs
+
+---
+
+## Author
+
+Manual QA Testing Practice Project
+Created as part of QA Engineer learning path.
