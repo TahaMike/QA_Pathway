@@ -1,105 +1,117 @@
-MANUAL QA TESTING PORTFOLIO
-Author: Mohammad Taha
-Role: Aspiring Manual QA Engineer
+# QA ENGINEER (MANUAL + AUTOMATION) PORTFOLIO
 
-------------------------------------------------------------
+**Author:** Mohammad Taha
 
-ABOUT THIS REPOSITORY
+**Role:** QA Engineer / Automation Engineer
 
-This repository contains my hands-on practice work in Manual Software Testing. 
-It includes structured test cases created using MS Excel for different application modules 
-by applying standard QA methodologies and test case design techniques.
+**Contact:** [LinkedIn Profile](https://www.linkedin.com/in/mohammadtaha707)
 
-The objective of this repository is to demonstrate:
+---
 
-- Understanding of SDLC and STLC
-- Practical implementation of test case design techniques
-- Ability to structure and document test scenarios
-- Knowledge of validation and negative testing
-- Organized QA documentation skills
+## ABOUT THIS REPOSITORY
 
-------------------------------------------------------------
+This repository serves as a comprehensive showcase of my end-to-end Quality Assurance capabilities, spanning Structured Manual Testing Methodology and Modern UI Test Automation.
 
-MODULES COVERED
+By bridging the gap between manual test case design and programmatic execution, this portfolio demonstrates a complete understanding of the Software Testing Life Cycle (STLC).
 
-1) Authentication Module (Login and Password Validation)
+### Core Competencies Demonstrated:
 
-Scope:
-- Login functionality testing
-- Password validation rules testing
-- Input field validation
-- Negative testing scenarios
+* **SDLC & STLC Integration:** Translating business requirements into structured manual test cases and converting critical regression paths into automated scripts.
+* 
+**Advanced Test Design:** Hands-on application of Black-Box testing techniques including Boundary Value Analysis (BVA) and Equivalence Partitioning (EP).
 
-Techniques Used:
-- Boundary Value Analysis (BVA)
-- Equivalence Partitioning (EP)
-- Positive Testing
-- Negative Testing
 
-Validations Covered:
-- Uppercase character requirement
-- Lowercase character requirement
-- Numeric character requirement
-- Minimum and maximum length validation
-- Invalid input handling
+* **Page Object Model (POM) Architecture:** Building scalable, maintainable, and decoupled automation frameworks using Python and Playwright.
+* **Stateful Authentication Caching:** Implementing advanced automation strategies like storage-state caching to optimize test execution speed.
+* 
+**Defect & Triage Documentation:** Writing execution-ready test sheets and designing robust runtime error-handling blocks.
 
-------------------------------------------------------------
 
-2) Form Validation Testing
 
-Scope:
-- Mandatory field validation
-- Invalid input handling
-- Edge case testing
-- Field-level validation testing
+---
 
-Activities Performed:
-- Designed structured test scenarios
-- Assigned appropriate priority levels
-- Prepared execution-ready test sheets
-- Maintained Pass/Fail/Not Executed status tracking
+## FRAMEWORK ARCHITECTURE & AUTOMATION SKILLS
 
-------------------------------------------------------------
+For the automation phase of this portfolio, I developed a scalable, high-velocity testing framework modeled around modern web application architectures.
 
-REPOSITORY CONTENTS
+### 1. Page Object Model (POM)
 
-This repository includes:
+The framework strictly separates the UI layer from the execution layer to maximize code reusability and minimize maintenance overhead:
 
-- Manual test case Excel files
-- Structured Test Case IDs
-- Preconditions and Test Steps
-- Test Data and Expected Results
-- Execution status tracking
-- Priority classification
+* **The Page Layer (`/pages`):** Encapsulates page-specific element locators using Playwright's semantic, user-facing locator APIs (`get_by_placeholder`, `get_by_role`) alongside private class attributes.
+* **The Test Layer (`/tests`):** Expresses pure functional test flows and assertions, completely isolated from hardcoded DOM selectors.
 
-------------------------------------------------------------
+### 2. Strategic Execution & Error Handling
 
-TOOLS USED
+* **Lifecycle Management:** Leverages Python context managers to handle browser session closures (`context.close()`, `browser.close()`), ensuring no memory leaks or dangling processes occur upon test failures.
+* **Resilient Navigation:** Combines `wait_until="domcontentloaded"` with Playwright's native auto-waiting features to eliminate test flakiness and maximize execution speeds.
+* **Defect Capture:** Formulated `try-except` blocks to safely catch `TimeoutError` exceptions, log structural failures, and gracefully bubble up errors to the test runner.
 
-- MS Excel (Test Case Documentation)
-- GitHub (Version Control and Portfolio Hosting)
+---
 
-------------------------------------------------------------
+## MODULES & TEST SCENARIOS COVERED
 
-TESTING APPROACH FOLLOWED
+### 1) Authentication & Session Management Module
 
-1. Requirement understanding
-2. Test scenario identification
-3. Test case design
-4. Application of BVA and EP techniques
-5. Organizing structured test documentation
-6. Preparing execution-ready test sheets
+* 
+**Manual Scope:** Formulated positive/negative test verification matrix for password complexity validation rules including uppercase, lowercase, numeric, and length constraints.
 
-------------------------------------------------------------
 
-OBJECTIVE
+* **Automation Scope:** Automated the login sequence, captured post-authentication browser cookies/tokens, and cached them into a local configuration artifact (`auth_session.json`). Subsequent tests inject this state to bypass the login UI, speeding up the regression suite.
 
-This repository reflects my continuous learning journey toward becoming a professional QA Engineer. 
-I am actively improving my skills in manual testing and expanding toward automation testing in upcoming phases.
+### 2) Core Workflow & Form Validation Testing
 
-------------------------------------------------------------
+* 
+**Manual Scope:** Designed structured execution sheets verifying mandatory fields, boundary edge cases, data input validation, and business logic routing.
 
-CONTACT
 
-LinkedIn: www.linkedin.com/in/mohammadtaha707
+* 
+**Automation Scope:** Programmed dynamic scripts to interact with business forms, using custom parameters to validate data input persistence and submission states.
 
+
+
+---
+
+## TECH STACK & TOOLS
+
+* **Languages & Frameworks:** Python, Playwright (Sync API)
+* **Test Runner:** Pytest, Pytest-xdist (Parallel Test Execution)
+* 
+**Manual Testing Documentation:** MS Excel for structured test cases, preconditions, priority mapping, and status tracking.
+
+
+* 
+**Version Control & Hosting:** Git, GitHub 
+
+
+
+---
+
+## TESTING APPROACH FOLLOWED
+
+```text
+Requirement Analysis ---> Scenario Identification ---> BVA/EP Test Case Design ---> Manual Execution Tracking ---> POM Automation Mapping ---> Parallel Regression Running
+
+```
+
+1. 
+**Analyze** business requirements and map out the user journey.
+
+
+2. 
+**Design** comprehensive manual test cases using EP and BVA to catch edge cases.
+
+
+3. 
+**Execute** manually to establish an application baseline and log defects.
+
+
+4. **Extract** stable page components into Page Object Model repositories.
+5. **Automate** critical path scenarios using Python and Playwright.
+6. **Scale** script execution across multiple CPU workers using parallel execution arguments.
+
+---
+
+## CONTINUOUS LEARNING OBJECTIVE
+
+This portfolio represents my transition from a strong foundation in manual testing methodologies into a professional capable of deploying fully automated UI regression suites. I am actively working on extending this framework to cover API testing integration, CI/CD pipeline automation via GitHub Actions, and visual regression testing.
