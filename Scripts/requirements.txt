@@ -1,0 +1,4 @@
+pytest
+playwright
+faker
+python-xdist

@@ -1,0 +1,42 @@
+name: Playwright Regression Suite
+
+# Global defaults to ensure every step runs inside your subfolder
+defaults:
+  run:
+    working-directory: Scripts
+
+# Controls when the pipeline runs
+on:
+  push:
+    branches: [main, master]  
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. Critical: Download your repository code onto the cloud runner
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    # 2. Initialize the Python environment
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+
+    # 3. Install framework requirements listed in your requirements.txt
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    # 4. Fetch the required headless browser binaries
+    - name: Install Playwright Browsers
+      run: playwright install chromium --with-deps
+
+    # 5. Execute your Pytest automation suite
+    - name: Run Playwright Tests
+      run: pytest --browser chromium
