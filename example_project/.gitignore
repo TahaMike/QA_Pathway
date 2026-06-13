@@ -1,0 +1,19 @@
+# --- Sensitive Configuration Data ---
+config.py
+
+# --- Test Generation Artifacts & Session Tokens ---
+artifacts/
+
+# --- Python System & Cache Files ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# --- IDE and Environment Settings ---
+.vscode/
+.idea/
+venv/
+.venv/
+env/
