@@ -1,4 +1,4 @@
 pytest
 playwright
 faker
-python-xdist
+pytest-xdist
