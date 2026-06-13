@@ -1,8 +1,9 @@
+from playwright.sync_api import Page
 from config import AppEndpoints
 
 
 class LoginPage:
-    def __init__(self, page):
+    def __init__(self, page: Page):
         self.page = page
         self._email = page.get_by_placeholder("you@company.com") # Adjust selectors to match your HTML
         self._password = page.get_by_placeholder("••••••••")
@@ -11,7 +12,7 @@ class LoginPage:
     def navigate(self):
         self.page.goto(AppEndpoints.LOGIN_PAGE)
 
-    def login(self, email, password):
+    def try_login(self, email, password):
         self._email.fill(email)
         self._password.fill(password)
         self._login_button.click()

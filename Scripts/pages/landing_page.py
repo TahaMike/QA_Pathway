@@ -1,14 +1,15 @@
 from playwright.sync_api import Page
+from config import AppEndpoints
 
-class QuickLettersPage:
+class LetterDraftingLandingPage:
     def __init__(self, page: Page):
         self.page = page
-        # The root element where the app is injected
-        self.root_container = page.locator("#root")
-        
-    def navigate(self):
-        self.page.goto("https://letter-drafting.vercel.app/")
+        # Locators for the landing page buttons
+        self._login_nav_button = self.page.get_by_role("link", name="Login")
+        self._get_started_button = self.page.get_by_role("button", name="Get Started")
 
-    def is_app_loaded(self) -> bool:
-        # Check if the root has content (meaning React has mounted)
-        return self.root_container.is_visible() and self.root_container.inner_html() != ""
+    def navigate(self):
+        self.page.goto(AppEndpoints.BASE_URL, wait_until="domcontentloaded")
+
+    def click_login(self):
+        self._login_nav_button.click()
