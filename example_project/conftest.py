@@ -12,7 +12,7 @@ def browser(playwright_instance):
     """Launches a single shared browser instance for the entire test session."""
     # Headless is set to True here because CI/CD pipelines require it.
     # To see it run locally, you can use the command-line flag: pytest --headed
-    browser_instance = playwright_instance.chromium.launch(headless=False)
+    browser_instance = playwright_instance.chromium.launch(headless=True)
     yield browser_instance
     browser_instance.close()
 
