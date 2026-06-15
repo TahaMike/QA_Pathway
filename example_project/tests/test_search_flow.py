@@ -9,7 +9,7 @@ def test_amazon_search(page: Page):
     home_page.navigate()
     home_page.get_title()
 
-    home_page.search_for_product("iPhone")
+    home_page.search_for_product("iphone")
 
 
     result_page.verify_results_are_visible()
