@@ -4,6 +4,9 @@ config.py
 # --- Test Generation Artifacts & Session Tokens ---
 artifacts/
 
+# ---- Text File
+notification_dump.txt
+
 # --- Python System & Cache Files ---
 __pycache__/
 *.pyc
