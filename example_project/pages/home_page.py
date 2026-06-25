@@ -12,4 +12,4 @@ class AmazonHomePage(BasePage):
         self._search_button.click()
 
     def navigate(self):
-        self.page.goto(AppEndpoints.BASE_URL, wait_until = "domcontentloaded")
+        self.page.goto(AppEndpoints.AMAZON_BASE_URL, wait_until = "domcontentloaded")
